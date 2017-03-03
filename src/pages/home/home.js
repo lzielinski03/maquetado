@@ -22,13 +22,23 @@ const Logo = () => {
 }
 
 const MenuItem = props => {
-	//let icon = ()
-	//let iconText =  
-	//let text = 
+	console.log(props)
+	let text = (props.label !== false && props.icon === false)
+	let icon = (props.label === false && props.icon !== false)
+	let iconText = (props.label !== false && props.icon !== false)
+ 
 	return (
-		<a href="#">
-			asd
-		</a>
+		<div>{/*<a>*/}
+			{ text &&
+				<label>{props.label}</label>
+			}
+			{ icon &&
+				<Icon name={props.icon} />
+			}
+			{ iconText &&
+				<LabelIcon text={props.label} name={props.icon}/>
+			}
+		</div>
 	)
 }
 
@@ -40,7 +50,7 @@ MenuItem.propTypes = {
 			)
 	},
 	icon: (props, propName, componentName) => {
-		if (props[propName] === false && props['icon'] === false)
+		if (props[propName] === false && props['label-icon'] === false)
 			return new Error(
 				'Failed prop type: One prop `icon` or `label` are required in `' + componentName + '`, but none is found.'
 			)
@@ -63,7 +73,7 @@ const Navigation = () => {
 			<li><a>Variations</a></li>
 			<li><a>Elements</a></li>
 			<MenuItem label="home" link="#" icon="down-arrow"/>
-			<MenuItem  link="#" />
+			<MenuItem label="blog" link="#" />
 			<MenuItem link="#" icon="down-arrow"/>
 		</ul>
 	)

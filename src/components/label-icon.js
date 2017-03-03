@@ -35,6 +35,7 @@ const LabelIcon = props => {
 LabelIcon.propTypes = {
 	'location': React.PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
 	'name': React.PropTypes.string.isRequired,
+	'text': React.PropTypes.string.isRequired,
 	'iconSize': React.PropTypes.number,
 	'separation': React.PropTypes.number
 }
