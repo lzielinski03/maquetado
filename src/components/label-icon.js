@@ -26,18 +26,18 @@ const LabelIcon = props => {
 
 	return (
 		<span style={{display: 'inline-flex', 'flexDirection': direction, 'alignItems': 'center'}}>
-			<label style={styles}>{props.text}</label>
+			<span style={styles}>{props.text}</span>
 			<Icon name={props.name} size={props.iconSize}/>
 		</span>
 	)
 }
 
 LabelIcon.propTypes = {
-	'location': React.PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
-	'name': React.PropTypes.string.isRequired,
-	'text': React.PropTypes.string.isRequired,
-	'iconSize': React.PropTypes.number,
-	'separation': React.PropTypes.number
+	location: React.PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+	name: React.PropTypes.string.isRequired,
+	text: React.PropTypes.string.isRequired,
+	iconSize: React.PropTypes.number,
+	separation: React.PropTypes.number
 }
 
 LabelIcon.defaultProps = {

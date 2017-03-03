@@ -5,7 +5,8 @@ import { connect } from 'react-redux' // shoud not be here
 import styled from 'styled-components';
 
 import Icon from './../../components/icon'
-import LabelIcon from './../../components/label-icon'
+import NavigationMenu from './../../components/navigation-menu'
+import MenuItem from './../../components/menu-item'
 
 /*
 import Title from './../components/title'
@@ -21,71 +22,32 @@ const Logo = () => {
 	)
 }
 
-const MenuItem = props => {
-	console.log(props)
-	let text = (props.label !== false && props.icon === false)
-	let icon = (props.label === false && props.icon !== false)
-	let iconText = (props.label !== false && props.icon !== false)
- 
-	return (
-		<div>{/*<a>*/}
-			{ text &&
-				<label>{props.label}</label>
-			}
-			{ icon &&
-				<Icon name={props.icon} />
-			}
-			{ iconText &&
-				<LabelIcon text={props.label} name={props.icon}/>
-			}
-		</div>
-	)
-}
-
-MenuItem.propTypes = {
-	label: (props, propName, componentName) => {
-		if (props[propName] === false && props['icon'] === false)
-			return new Error(
-				'Failed prop type: One prop `icon` or `label` are required in `' + componentName + '`, but none is found.'
-			)
-	},
-	icon: (props, propName, componentName) => {
-		if (props[propName] === false && props['label-icon'] === false)
-			return new Error(
-				'Failed prop type: One prop `icon` or `label` are required in `' + componentName + '`, but none is found.'
-			)
-	}
-}
-
-MenuItem.defaultProps = {
-	label: false,
-	icon: false,
-	link: false
-}
-
-const Navigation = () => {
-	return (
-		<ul>
-			<li><a>Home</a></li>
-			<li><a>Blog</a></li>
-			<li><a>Portfolio</a></li>
-			<li><a>Shop</a></li>
-			<li><a>Variations</a></li>
-			<li><a>Elements</a></li>
-			<MenuItem label="home" link="#" icon="down-arrow"/>
-			<MenuItem label="blog" link="#" />
-			<MenuItem link="#" icon="down-arrow"/>
-		</ul>
-	)
-}
-
-
 const Header = () => {
 	return (
 		<div>
 			<Logo/>
-			<Navigation/>
+			<NavigationMenu separation={15} direction="row">
+				<MenuItem link="#" label="Home" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Blog" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Portfolio" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Shop" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Variations" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Elements" icon="down-arrow" separation={8}/>
+			</NavigationMenu>
+
+			<NavigationMenu separation={5} direction="column">
+				<MenuItem link="#" label="Home" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Blog" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Portfolio" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Shop" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Variations" icon="down-arrow" separation={8}/>
+				<MenuItem link="#" label="Elements" icon="down-arrow" separation={8}/>
+			</NavigationMenu>
+
 {/*
+	<MenuItem label="home" link="#" icon="down-arrow"/>
+			<MenuItem label="blog" link="#" />
+			<MenuItem link="#" icon="down-arrow"/>
 			<LabelIcon name="down-arrow" text="Home" separation={8}/>
 			<LabelIcon name="down-arrow" text="Blog" separation={8}/>
 			<LabelIcon name="down-arrow" text="Portfolio" separation={8}/>
@@ -101,8 +63,8 @@ const Page = () => {
 		<div className="root">
 			
 			<Header/>
-				
-				$Navigation
+				<pre>
+				$Navigation #separation #direction  
 					$menu-item #label #link #icon
 						$Navigation
 
@@ -110,7 +72,7 @@ const Page = () => {
 						$Navigation
 
 					$menu-item #label #link #icon
-
+				</pre>
 
 
 		</div>

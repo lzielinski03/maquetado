@@ -2,7 +2,7 @@ import React from 'react'
 
 const Icon = (props) => {
 	return (
-		<span className={"icon-" + props.name} style={{fontSize: props.size}}/>
+		<i className={"icon-" + props.name} style={{fontSize: props.size}}/>
 	)
 }
 
