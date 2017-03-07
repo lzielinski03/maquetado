@@ -8,8 +8,8 @@ const NavigationMenu = props => {
 		flexDirection: props.direction
 	}
 
-	let children = props.children.map( children => {
-		return <li style={padding} key={children.props.label}>{children}</li>
+	let children = props.children.map( (children, index) => {
+		return <li style={padding} key={index}>{children}</li>
 	})
 	return (
 		<nav>

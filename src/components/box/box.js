@@ -19,7 +19,7 @@ const Box = styled.div`
 	${ props => {
 		const flexParent = ['flex-direction', 'flex-wrap', 'justify-content', 'align-items', 'align-content']
 		const flexChildren = ['flex', 'order', 'flex-grow', 'flex-shrink', 'flex-basis', 'align-self']
-		const styleProps = ['background-color', 'color', 'width', 'height', 'opacity', 'margin', 'margin-top', 'position', 'align-content', 'display']
+		const styleProps = ['background', 'background-color', 'background-image', 'background-size', 'background-position', 'background-attachment', 'color', 'width', 'height', 'opacity', 'margin', 'margin-top', 'position', 'align-content', 'display']
 
 		let styles = {}
 
@@ -50,10 +50,10 @@ const Box = styled.div`
 		return styles;
 	}}
 `
-
+/*
 Box.defaultProps = {
 	'background-color': 'rgb(155, 208, 225)'
-}
+}*/
 
 Box.propTypes = {
 	'flex-direction': React.PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
