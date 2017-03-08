@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from './icon'
+import Icon from './basic/icon'
 
 const LabelIcon = props => {
 	let direction = 'row'

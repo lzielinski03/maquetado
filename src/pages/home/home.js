@@ -4,10 +4,18 @@ import { bindActionCreators } from 'redux' // shoud not be here
 import { connect } from 'react-redux' // shoud not be here
 import styled from 'styled-components';
 
-import Icon from './../../components/icon'
+import Logo from './../../components/custom/logo'
+import Navigation from './../../components/custom/navigation'
+import NavigationItem from './../../components/custom/navigation-item'
+
+import Icon from './../../components/basic/icon'
 import NavigationMenu from './../../components/navigation-menu'
+import List from './../../components/basic/list'
 import MenuItem from './../../components/menu-item'
+import ItemList from './../../components/basic/item-list'
 import Box from './../../components/box/box'
+import Label from './../../components/basic/label'
+import Link from './../../components/basic/link'
 
 /*
 import Title from './../components/title'
@@ -15,13 +23,7 @@ import Subtitle from './../components/subtitle'
 import Button from './../components/button'
 */
 
-const Logo = () => {
-	return (
-		<a href="#">
-			<img src="/src/assets/images/Logo_dark_2.png"/>
-		</a>
-	)
-}
+
 
 const Header = () => {
 	return (
@@ -30,31 +32,63 @@ const Header = () => {
 			background-size="contain"
 			background-position="center"
 			width="100%" height="0" padding-bottom="27%">
-			<Logo/>
-			<NavigationMenu separation={15} direction="row">
-				<MenuItem link="#" label="Home" icon="down-arrow" separation={8}/>
-				<MenuItem link="#" label="Blog" icon="down-arrow" separation={8}/>
-				<MenuItem link="#" label="Portfolio" icon="down-arrow" separation={8}/>
-				<MenuItem link="#" label="Shop" icon="down-arrow" separation={8}/>
-				<MenuItem link="#" label="Variations" icon="down-arrow" separation={8}/>
-				<MenuItem link="#" label="Elements" icon="down-arrow" separation={8}/>
-				<MenuItem link="#" icon="down-arrow" separation={8}/>
-				<MenuItem link="#" icon="down-arrow" separation={8}/>
-				<MenuItem link="#" icon="down-arrow" separation={8}/>
-				<MenuItem link="#" icon="down-arrow" separation={8}/>
-			</NavigationMenu>
 
+			<Logo link="/#" image="/src/assets/images/Logo_dark_2.png"/>
 
-{/*
-	<MenuItem label="home" link="#" icon="down-arrow"/>
-			<MenuItem label="blog" link="#" />
-			<MenuItem link="#" icon="down-arrow"/>
-			<LabelIcon name="down-arrow" text="Home" separation={8}/>
-			<LabelIcon name="down-arrow" text="Blog" separation={8}/>
-			<LabelIcon name="down-arrow" text="Portfolio" separation={8}/>
-			<LabelIcon name="down-arrow" text="Shop" separation={8}/>
-			<LabelIcon name="down-arrow" text="Variations" separation={8}/>
-			<LabelIcon name="down-arrow" text="Elements" separation={8}/>*/}
+			<Navigation>
+				{/* Opcion 1: label ass props */}
+				<NavigationItem href="#" label="home"/>
+				<NavigationItem href="#" icon="down-arrow"/>
+				<NavigationItem href="#" label="home" icon="down-arrow"/>
+
+				{/* Opcion 2: childs */}
+				<NavigationItem href="#">
+					<Label>Home</Label>
+				</NavigationItem>
+
+				<NavigationItem href="#">
+					<Icon name="down-arrow" />
+				</NavigationItem>
+
+				<NavigationItem href="#">
+					<Label>Home</Label>
+					<Icon name="down-arrow" />
+				</NavigationItem>
+
+				<NavigationItem href="#">
+					<Icon name="down-arrow" />
+					<Label>Home</Label>
+				</NavigationItem>
+
+			</Navigation>
+
+			<List direction="row">
+				<ItemList>
+					<Link href="#">
+						<Icon name="down-arrow" />
+					</Link>
+				</ItemList>
+
+				<ItemList>
+					<Link href="#">
+						<Label>Home</Label>
+					</Link>
+				</ItemList>
+
+				<ItemList>
+					<Link href="#">
+						<Icon name="down-arrow" />
+						<Label>Blog</Label>
+					</Link>
+				</ItemList>
+
+				<ItemList>
+					<Link href="#">
+						<Label>Shop</Label>
+						<Icon name="down-arrow" />
+					</Link>
+				</ItemList>
+			</List>
 		</Box>
 	)
 }

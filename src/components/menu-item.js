@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from './icon'
+import Icon from './basic/icon'
 import LabelIcon from './label-icon'
 
 const MenuItem = props => {
