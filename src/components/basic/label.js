@@ -3,14 +3,20 @@ import styled from 'styled-components'
 
 const Label = styled.label`
 	${ props => {
-		let styles = {}
+		let styles = {
+			padding: props.padding
+		}
 
 		return styles
 	} }
 `
 
+Label.defaultProps = {
+	padding: '0 0 0 0'
+}
+
 Label.propTypes = {
-	value: React.PropTypes.string
+	padding: React.PropTypes.string
 }
 
 

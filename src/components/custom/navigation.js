@@ -3,7 +3,6 @@ import List from './../basic/list'
 import Image from './../basic/image'
 
 const Navigation = (props) => {
-	console.log(props)
 	return (
 		<nav>
 			<List direction={props.direction}>

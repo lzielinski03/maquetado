@@ -35,20 +35,7 @@ const Header = () => {
 
 			<Logo link="/#" image="/src/assets/images/Logo_dark_2.png"/>
 
-			<Navigation>
-				{/* Opcion 1: label ass props */}
-				<NavigationItem href="#" label="home"/>
-				<NavigationItem href="#" icon="down-arrow"/>
-				<NavigationItem href="#" label="home" icon="down-arrow"/>
-
-				{/* Opcion 2: childs */}
-				<NavigationItem href="#">
-					<Label>Home</Label>
-				</NavigationItem>
-
-				<NavigationItem href="#">
-					<Icon name="down-arrow" />
-				</NavigationItem>
+			<Navigation separation={8}>
 
 				<NavigationItem href="#">
 					<Label>Home</Label>
@@ -56,12 +43,17 @@ const Header = () => {
 				</NavigationItem>
 
 				<NavigationItem href="#">
+					<Label>Blog</Label>
 					<Icon name="down-arrow" />
-					<Label>Home</Label>
+				</NavigationItem>
+
+				<NavigationItem href="#">
+					<Label>Shop</Label>
+					<Icon name="down-arrow" />
 				</NavigationItem>
 
 			</Navigation>
-
+{/*
 			<List direction="row">
 				<ItemList>
 					<Link href="#">
@@ -88,7 +80,7 @@ const Header = () => {
 						<Icon name="down-arrow" />
 					</Link>
 				</ItemList>
-			</List>
+			</List>*/}
 		</Box>
 	)
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Icon = (props) => {
+const Icon = ({name, size}) => {
 	return (
-		<i className={"icon-" + props.name} style={{fontSize: props.size}}/>
+		<i className={"icon-" + name} style={{fontSize: size}}/>
 	)
 }
 

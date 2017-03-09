@@ -7,11 +7,20 @@ import Label from './../basic/label'
 const NavigationItem = (props) => {
 	return (
 		<ItemList>
-			<Link href="#">
-				<Icon name="down-arrow" />
-			</Link>
+			{renderChildren(props.children)}
 		</ItemList>
 	)
+}
+
+function renderChildren(children) {
+	return React.Children.map(children, (child, index) => {
+		if (index == 0)
+			return React.cloneElement(child, {
+				padding: '0 5px 0 0'
+			})
+		else
+			return child	
+	})
 }
 
 NavigationItem.propTypes = {
