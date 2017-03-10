@@ -6,10 +6,18 @@ const Navigation = (props) => {
 	return (
 		<nav>
 			<List direction={props.direction}>
-				{props.children}
+				{renderChildren(props)}
 			</List>
 		</nav>
 	)
+}
+
+function renderChildren(props) {
+	return React.Children.map(props.children, child => {
+		return React.cloneElement(child, {
+			padding: '0 '+props.separation+'px 0 '+props.separation+'px'
+		})
+	})
 }
 
 Navigation.propTypes = {

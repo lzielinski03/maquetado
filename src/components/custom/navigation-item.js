@@ -5,8 +5,9 @@ import Icon from './../basic/icon'
 import Label from './../basic/label'
 
 const NavigationItem = (props) => {
+	console.log(props)
 	return (
-		<ItemList>
+		<ItemList padding={props.padding}>
 			{renderChildren(props.children)}
 		</ItemList>
 	)

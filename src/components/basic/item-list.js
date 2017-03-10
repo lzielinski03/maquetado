@@ -3,7 +3,9 @@ import styled from 'styled-components'
 
 const ItemList = styled.li`
 	${ props => {
-		let styles = {}
+		let styles = {
+			padding: props.padding
+		}
 
 		return styles
 	} }
