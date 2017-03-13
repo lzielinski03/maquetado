@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ItemList = styled.li`
+const Navigation = styled.nav`
 	${ props => {
 		let styles = {}
 		const styleProps = [
 			'background', 'background-color', 'background-image', 'background-size', 'background-position',
 			'background-attachment', 'color', 'width', 'height', 'opacity', 'margin', 'margin-top', 'position',
 			'align-content', 'display', 'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top',
-			'display', 'align-items', 'position']
+			'font-size', 'font-family', 'flex-grow', 'text-align']
 
 		styleProps.forEach( property => {
 			if (props.hasOwnProperty(property))
@@ -19,4 +19,4 @@ const ItemList = styled.li`
 	} }
 `
 
-export default ItemList
+export default Navigation

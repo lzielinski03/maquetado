@@ -1,18 +1,19 @@
 import React from 'react'
 
-const Icon = ({name, size}) => {
+const Icon = ({name, size, color}) => {
 	return (
-		<i className={"icon-" + name} style={{fontSize: size}}/>
+		<i className={"icon-" + name} style={{fontSize: size, color: color}}/>
 	)
 }
 
 Icon.propTypes = {
 	'name': React.PropTypes.string.isRequired,
-	'size': React.PropTypes.number
+	'size': React.PropTypes.string
 }
 
 Icon.defaultProps = {
-	size: 16
+	size: 16,
+	color: 'white'
 }
 
 export default Icon

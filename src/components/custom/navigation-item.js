@@ -6,12 +6,15 @@ import Label from './../basic/label'
 
 const NavigationItem = (props) => {
 	return (
-		<ItemList>
-			{renderChildren(props.children)}
+		<ItemList padding={props.padding} position={props.position}>
+			<Link href={props.href}>
+				{props.children}
+			</Link>
 		</ItemList>
 	)
 }
-
+/*	Add prop from parent to chidren
+	{renderChildren(props.children)}
 function renderChildren(children) {
 	return React.Children.map(children, (child, index) => {
 		if (index == 0)
@@ -22,6 +25,7 @@ function renderChildren(children) {
 			return child	
 	})
 }
+*/
 
 NavigationItem.propTypes = {
 	//direction: React.PropTypes.oneOf(['row', 'column']),
