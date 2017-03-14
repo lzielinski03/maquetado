@@ -7,15 +7,10 @@ import Label from './../basic/label'
 const NavigationItem = (props) => {
 	console.log(props)
 	return (
-<<<<<<< HEAD
 		<ItemList padding={props.padding} position={props.position}>
 			<Link href={props.href}>
 				{props.children}
 			</Link>
-=======
-		<ItemList padding={props.padding}>
-			{renderChildren(props.children)}
->>>>>>> 6ee91847bcade309f459bee35aa007c15ddf2d5b
 		</ItemList>
 	)
 }

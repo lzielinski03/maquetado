@@ -45,62 +45,89 @@ const Header = () => {
 								<Icon name="down-arrow" color="white" size="13px"/>
 							</Link>
 
-							<List direction="column">
+							<List flex-direction="column" position="absolute">
 								<ItemList href="#">
-									<Label>home 1</Label>
+									<Link href="#">
+										<Label>home 1</Label>
+									</Link>
 								</ItemList>
-
+								
 								<ItemList href="#">
-									<Label>home 1</Label>
+									<Link href="#">
+										<Label>home 1</Label>
+									</Link>
 								</ItemList>
-
+								
 								<ItemList href="#">
-									<Label>home 1</Label>
+									<Link href="#">
+										<Label>home 1</Label>
+									</Link>
 								</ItemList>
+								
+								
 							</List>
 
 						</ItemList>
 
-						<NavigationItem href="#" padding="0 15px">
-							<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Blog</Label>
-							<Icon name="down-arrow" color="white" size="13px"/>
-						</NavigationItem>
+						<ItemList padding="0 15px">
+							<Link href="#">
+								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Blog</Label>
+								<Icon name="down-arrow" color="white" size="13px"/>
+							</Link>
+						</ItemList>
 
-						<NavigationItem href="#" padding="0 15px">
-							<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Porfolio</Label>
-							<Icon name="down-arrow" color="white" size="13px"/>
-						</NavigationItem>
+						<ItemList padding="0 15px">
+							<Link href="#">
+								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Porfolio</Label>
+								<Icon name="down-arrow" color="white" size="13px"/>
+							</Link>
+						</ItemList>
 
-						<NavigationItem href="#" padding="0 15px">
-							<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Shop</Label>
-							<Icon name="down-arrow" color="white" size="13px"/>
-						</NavigationItem>
+						<ItemList padding="0 15px">
+							<Link href="#">
+								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Shop</Label>
+								<Icon name="down-arrow" color="white" size="13px"/>
+							</Link>
+						</ItemList>
 
-						<NavigationItem href="#" padding="0 15px">
-							<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Variations</Label>
-							<Icon name="down-arrow" color="white" size="13px"/>
-						</NavigationItem>
+						<ItemList padding="0 15px">
+							<Link href="#">
+								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Variations</Label>
+								<Icon name="down-arrow" color="white" size="13px"/>
+							</Link>
+						</ItemList>
 
-						<NavigationItem href="#" padding="0 15px">
-							<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Elements</Label>
-							<Icon name="down-arrow" color="white" size="13px"/>
-						</NavigationItem>
+						<ItemList padding="0 15px">
+							<Link href="#">
+								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Elements</Label>
+								<Icon name="down-arrow" color="white" size="13px"/>
+							</Link>
+						</ItemList>
 
-						<NavigationItem href="#" padding="0 8px" display="inline-flex" align-items="center">
-							<Icon name="down-arrow" color="white" size="13px"/>
-						</NavigationItem>
+						<ItemList padding="0 15px">
+							<Link href="#">
+								<Icon name="down-arrow" color="white" size="13px"/>
+							</Link>
+						</ItemList>
 
-						<NavigationItem href="#" padding="0 8px" display="inline-flex" align-items="center">
-							<Icon name="down-arrow" color="white" size="13px"/>
-						</NavigationItem>
+						<ItemList padding="0 15px">
+							<Link href="#">
+								<Icon name="down-arrow" color="white" size="13px"/>
+							</Link>
+						</ItemList>
 
-						<NavigationItem href="#" padding="0 8px" display="inline-flex" align-items="center">
-							<Icon name="down-arrow" color="white" size="13px"/>
-						</NavigationItem>
+						<ItemList padding="0 15px">
+							<Link href="#">
+								<Icon name="down-arrow" color="white" size="13px"/>
+							</Link>
+						</ItemList>
 
-						<NavigationItem href="#" padding="0 8px" display="inline-flex" align-items="center">
-							<Icon name="down-arrow" color="white" size="13px"/>
-						</NavigationItem>
+						<ItemList padding="0 15px">
+							<Link href="#">
+								<Icon name="down-arrow" color="white" size="13px"/>
+							</Link>
+						</ItemList>
+						
 					</List>
 				</Navigation>
 			</Box>
