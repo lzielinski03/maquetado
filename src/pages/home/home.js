@@ -40,10 +40,10 @@ const Header = () => {
 			background-position="center"
 			width="100%" height="0" padding-bottom="27%">
 
-			<Box display="flex" align-items="center" height="100px" padding="0 5%">
+			<Box display="flex" align-items="center" height="100px" padding="0 5%" justify-content="space-between">
 				<Logo link="/#" image="/src/assets/images/Jevelin-logov1.png"/>
 
-				<Navigation text-align="right" flex-grow="1">
+				<Navigation>
 					<List>
 						
 						<ItemList padding="0 15px" position="relative">
@@ -64,8 +64,6 @@ const Header = () => {
 								<ItemList href="#">
 									<Link href="#" font-family="Raleway" font-size="14px" color="rgb(170, 170, 170)" white-space="nowrap" padding="6px 30px" display="block">home 1</Link>
 								</ItemList>
-								
-								
 							</List>
 
 						</ItemList>
