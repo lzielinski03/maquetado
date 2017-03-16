@@ -21,6 +21,13 @@ import Link from './../../components/basic/link'
 import Title from './../components/title'
 import Subtitle from './../components/subtitle'
 import Button from './../components/button'
+
+styled-components hover properties on parents
+				  shared behaivor
+				  custom props
+				  		inline { funciona en diferentes nieles,
+				  		block    elementos comunes tanto como flex }
+				  		auto flex 	
 */
 
 
@@ -40,28 +47,22 @@ const Header = () => {
 					<List>
 						
 						<ItemList padding="0 15px" position="relative">
-							<Link href="#">
-								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Home</Label>
+							<Link href="#" padding="30px 0 30px 0">
+								<Label font-size="13px" padding-right="8px" font-family="Montserrat" font-weight="700" color="white">Home</Label>
 								<Icon name="down-arrow" color="white" size="13px"/>
 							</Link>
 
-							<List flex-direction="column" position="absolute">
+							<List margin="30px 0 0 -30px" display="none" flex-direction="column" position="absolute" className="hover_workarround" background-color="#232323" padding="16px 0">
 								<ItemList href="#">
-									<Link href="#">
-										<Label>home 1</Label>
-									</Link>
+									<Link href="#" font-family="Raleway" font-size="14px" color="rgb(170, 170, 170)" white-space="nowrap" padding="6px 30px" display="block">home 1</Link>
+								</ItemList>
+
+								<ItemList href="#">
+									<Link href="#" font-family="Raleway" font-size="14px" color="rgb(170, 170, 170)" white-space="nowrap" padding="6px 30px" display="block">home 1</Link>
 								</ItemList>
 								
 								<ItemList href="#">
-									<Link href="#">
-										<Label>home 1</Label>
-									</Link>
-								</ItemList>
-								
-								<ItemList href="#">
-									<Link href="#">
-										<Label>home 1</Label>
-									</Link>
+									<Link href="#" font-family="Raleway" font-size="14px" color="rgb(170, 170, 170)" white-space="nowrap" padding="6px 30px" display="block">home 1</Link>
 								</ItemList>
 								
 								
@@ -70,36 +71,36 @@ const Header = () => {
 						</ItemList>
 
 						<ItemList padding="0 15px">
-							<Link href="#">
-								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Blog</Label>
+							<Link href="#" padding="30px 0 30px 0">
+								<Label font-size="13px" padding-right="8px" font-family="Montserrat" font-weight="700" color="white">Blog</Label>
 								<Icon name="down-arrow" color="white" size="13px"/>
 							</Link>
 						</ItemList>
 
 						<ItemList padding="0 15px">
-							<Link href="#">
-								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Porfolio</Label>
+							<Link href="#" padding="30px 0 30px 0">
+								<Label font-size="13px" padding-right="8px" font-family="Montserrat" font-weight="700" color="white">Porfolio</Label>
 								<Icon name="down-arrow" color="white" size="13px"/>
 							</Link>
 						</ItemList>
 
 						<ItemList padding="0 15px">
-							<Link href="#">
-								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Shop</Label>
+							<Link href="#" padding="30px 0 30px 0">
+								<Label font-size="13px" padding-right="8px" font-family="Montserrat" font-weight="700" color="white">Shop</Label>
 								<Icon name="down-arrow" color="white" size="13px"/>
 							</Link>
 						</ItemList>
 
 						<ItemList padding="0 15px">
-							<Link href="#">
-								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Variations</Label>
+							<Link href="#" padding="30px 0 30px 0">
+								<Label font-size="13px" padding-right="8px" font-family="Montserrat" font-weight="700" color="white">Variations</Label>
 								<Icon name="down-arrow" color="white" size="13px"/>
 							</Link>
 						</ItemList>
 
 						<ItemList padding="0 15px">
-							<Link href="#">
-								<Label padding-right="8px" font-size="13px" font-family="Montserrat" font-weight="700" color="white">Elements</Label>
+							<Link href="#" padding="30px 0 30px 0">
+								<Label font-size="13px" padding-right="8px" font-family="Montserrat" font-weight="700" color="white">Elements</Label>
 								<Icon name="down-arrow" color="white" size="13px"/>
 							</Link>
 						</ItemList>

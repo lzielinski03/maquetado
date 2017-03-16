@@ -2,6 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ItemList = styled.li`
+	&:hover {
+		> .hover_workarround {
+			display: block;
+		}
+	}
 	${ props => {
 		let styles = {}
 		const styleProps = [
